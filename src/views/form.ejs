@@ -2,10 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Stackfindover: Sign in</title>
-    <link rel="stylesheet" type="text/css" href="public/form.css" />
+    <title>Tra cứu thông tin</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
   </head>
   <style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type='number'] {
+      -moz-appearance: textfield;
+    }
     * {
       padding: 0;
       margin: 0;
@@ -353,9 +364,7 @@
             class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center"
           >
             <h1>
-              <a href="http://blog.stackfindover.com/" rel="dofollow"
-                >HỖ TRỢ SINH VIÊN</a
-              >
+              <a href="#" rel="dofollow">HỖ TRỢ SINH VIÊN</a>
             </h1>
           </div>
           <div class="formbg-outer">
@@ -367,7 +376,7 @@
                 <form method="post" action="/account/find">
                   <div class="field padding-bottom--24">
                     <label for="email"><b>Mã sinh viên</b></label>
-                    <input inputmode="numeric" name="msv" required />
+                    <input type="number" name="msv" required />
                   </div>
 
                   <div class="field padding-bottom--24">

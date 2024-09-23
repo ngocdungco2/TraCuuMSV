@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AccountModule } from './account/account.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -18,6 +20,9 @@ import { AccountModule } from './account/account.module';
       isGlobal: true,
     }),
     AccountModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'src/public'),
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],

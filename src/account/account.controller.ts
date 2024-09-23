@@ -25,7 +25,7 @@ export class AccountController {
     return check;
   }
   @Get('find/:msv')
-  @Render('table')
+  @Render('tablev2')
   findByMsv(@Param('msv') msv: any) {
     // return msv;
     return this.accountService.findByMsv(+msv);
